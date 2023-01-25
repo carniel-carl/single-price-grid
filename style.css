@@ -35,7 +35,7 @@ p {
 }
 
 .card {
-    max-width: 38rem;
+    max-width: 40rem;
     border-radius: .5rem;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 20%);
     text-align: left;
@@ -51,7 +51,7 @@ p {
 .top-container,
 .about-container,
 .subscription-container {
-    padding: 2rem;
+    padding: 2.3rem 2rem;
 }
 
 .top-container {
