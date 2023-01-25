@@ -26,13 +26,12 @@ body {
     min-height: 100vh;
     display: grid;
     place-content: center;
-    margin: 2rem 1.5rem;
     background: var(--LIGHT-GRAY);
 }
 
 p {
     color: var(--LIGHT-GRAY);
-    
+
 }
 
 .card {
@@ -42,17 +41,21 @@ p {
     text-align: left;
     overflow: hidden;
     display: grid;
-    grid-template-areas: 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
         "join join"
         "sub about";
 }
 
-.top-container , .about-container , .subscription-container {
+.top-container,
+.about-container,
+.subscription-container {
     padding: 2rem;
 }
 
 .top-container {
-    grid-area: join ;
+    grid-area: join;
     background: white;
 }
 
@@ -73,7 +76,7 @@ p {
 }
 
 .subscription-container {
-    grid-area: sub ;
+    grid-area: sub;
     background: var(--CYAN);
 }
 
@@ -98,7 +101,6 @@ h4 {
 .small {
     font-size: .95rem;
     color: var(--LIGHT-GRAY);
-    opacity: 50%;
 }
 
 a {
@@ -120,17 +122,21 @@ a {
 
 .about-paragraph {
     font-size: .8rem;
-    color: white;
-    opacity: 60%;
-    line-height: 1.5;
+    color: var(--LIGHT-GRAY);
+    line-height: 1.6;
 }
 
 
 @media screen and (max-width: 500px) {
+    body {
+        margin: 2rem 1.5rem;
+    }
     .card {
-        grid-template-areas: 
-        "join"
-        "sub" 
-        "about";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "join"
+            "sub"
+            "about";
     }
 }
