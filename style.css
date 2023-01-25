@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* --------------COLOURS--------------- */
+
+    /* -----PRIMARY COLOURS------ */
+
+    --CYAN: hsl(179, 62%, 43%);
+    --BRIGHT-YELLOW: hsl(71, 73%, 54%);
+
+    /* -----NEUTRAL COLOURS------ */
+
+    --LIGHT-GRAY: hsl(204, 43%, 93%);
+    --GRAYISH-BLUE: hsl(218, 22%, 67%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 2rem 1.5rem;
+    background: var(--LIGHT-GRAY);
+}
+
+p {
+    color: var(--LIGHT-GRAY);
+    
+}
+
+.card {
+    max-width: 38rem;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 20%);
+    text-align: left;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+        "join join"
+        "sub about";
+}
+
+.top-container , .about-container , .subscription-container {
+    padding: 2rem;
+}
+
+.top-container {
+    grid-area: join ;
+    background: white;
+}
+
+.heading {
+    color: var(--CYAN);
+    margin-bottom: 1.3rem;
+}
+
+.subheading {
+    color: var(--BRIGHT-YELLOW);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.heading-paragraph {
+    color: var(--GRAYISH-BLUE);
+    line-height: 1.7;
+}
+
+.subscription-container {
+    grid-area: sub ;
+    background: var(--CYAN);
+}
+
+h4 {
+    color: var(--LIGHT-GRAY);
+    margin-bottom: 1rem;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: .5rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: var(--LIGHT-GRAY);
+    font-weight: 700;
+}
+
+.small {
+    font-size: .95rem;
+    color: var(--LIGHT-GRAY);
+    opacity: 50%;
+}
+
+a {
+    margin: 1.6rem 0 0;
+    background: var(--BRIGHT-YELLOW);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: .8rem;
+    color: white;
+    border-radius: .3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 20%);
+}
+
+.about-container {
+    grid-area: about;
+    background: hsl(179deg 62% 43% / 85%);
+}
+
+.about-paragraph {
+    font-size: .8rem;
+    color: white;
+    opacity: 60%;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 500px) {
+    .card {
+        grid-template-areas: 
+        "join"
+        "sub" 
+        "about";
+    }
+}
